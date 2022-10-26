@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= webpackConfig.name %></title>
+    <% if (NODE_ENV === 'development') { %>
+      <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.10/theme-chalk/index.css">
+    <% } %>
+    <% if (NODE_ENV === 'production') { %>
+      <link rel="stylesheet" href="https://cdn.staticfile.org/element-ui/2.15.10/theme-chalk/index.min.css">
+    <% } %>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= webpackConfig.name %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div> 
+    <% if (NODE_ENV === 'development') { %>
+      <script src="https://cdn.staticfile.org/vue/2.6.14/vue.js"></script>
+      <script src="https://cdn.staticfile.org/vuex/3.6.2/vuex.js"></script>
+      <script src="https://cdn.staticfile.org/vue-router/3.5.1/vue-router.js"></script>
+      <script src="https://cdn.staticfile.org/element-ui/2.15.10/index.js"></script>
+    <% } %>
+    <% if (NODE_ENV === 'production') { %>
+      <script src="https://cdn.staticfile.org/vue/2.6.14/vue.min.js"></script>
+      <script src="https://cdn.staticfile.org/vuex/3.6.2/vuex.min.js"></script>
+      <script src="https://cdn.staticfile.org/vue-router/3.5.1/vue-router.min.js"></script>
+      <script src="https://cdn.staticfile.org/element-ui/2.15.10/index.min.js"></script>
+      <% } %>
+      <script src="https://cdn.staticfile.org/g2plot/2.4.20/g2plot.min.js"></script>
+
+      <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css">
+  </body>
+</html>
